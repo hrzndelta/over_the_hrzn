@@ -1,0 +1,82 @@
+# ================================
+#  Docker & Environment Variables
+# ================================
+# Ignore .env files as they contain sensitive credentials
+.env
+.env.local
+.env.production
+.env.staging
+
+# Ansible
+*_vars/secret.yml
+*.retry
+.ansible/
+
+# Ignore Docker Compose overrides you might create locally
+docker-compose.override.yml
+
+# ================================
+#  CAD Files (General & Specific)
+# ================================
+
+## General CAD / Backup Files
+*.bak
+*.tmp
+*.temp
+*~           # Temporary files often created by CAD software
+
+## FreeCAD
+*.FCBak     # FreeCAD backup files
+
+## KiCad (Electronic CAD)
+*.kicad_sch-bak
+*.kicad_pcb-bak
+*.cache/
+fp-info-cache
+*.dcm
+*.net
+*.xml       # Often intermediate or cache files
+
+## Altium
+__Previews/
+History/
+*.OutJob
+*.PcbDocPreview
+*.PrjPCBStructure
+
+## AutoCAD / DWG
+*.dwf
+*.dwf.x
+*.dwl
+*.dwl2
+*.bak$
+
+## 3D Model / Mesh Formats (Often generated or exported)
+*.stl
+*.step
+*.stp
+*.3mf
+*.obj
+*.dxf
+
+# ================================
+#  Common System & Temp Files
+# ================================
+# OS specific files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+.desktop
+.directory
+
+# Editor/IDE files
+.vscode/
+.idea/
+*.swp
+*.kate-swp
+*.swo
+*~
+
+# Logs
+*.log
+logs/
